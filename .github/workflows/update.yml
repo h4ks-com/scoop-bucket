@@ -1,0 +1,30 @@
+# points each manifest at its project's latest release with a Windows zip
+name: Update manifests
+on:
+  schedule:
+    - cron: "37 */6 * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [release]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - run: |
+          scripts/update.sh kess h4ks-com/kess "Chess on a glossy 3D board in your terminal, against a bot or online" GPL-3.0-or-later
+          scripts/update.sh katnav h4ks-com/katnav "Web browser for the terminal, drawn with the kitty graphics protocol" "MIT|Apache-2.0"
+        env:
+          GH_TOKEN: ${{ github.token }}
+      - name: Commit changed manifests
+        run: |
+          git add bucket
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: update $(git diff --cached --name-only | xargs -n1 basename | sed 's/\.json$//' | paste -sd ' ' -)"
+          git push
