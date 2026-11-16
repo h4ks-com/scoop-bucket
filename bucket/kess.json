@@ -1,13 +1,13 @@
 {
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Chess on a glossy 3D board in your terminal, against a bot or online",
   "homepage": "https://github.com/h4ks-com/kess",
   "license": "GPL-3.0-or-later",
   "notes": "Run it in WezTerm nightly to see its graphics: https://wezterm.org/install/windows.html",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/h4ks-com/kess/releases/download/v0.2.2/kess-x86_64-pc-windows-msvc.zip",
-      "hash": "85cdde5aeba90245c6c61c327362742ca8e2e064c5eb61a8183cb7e64a7b8689"
+      "url": "https://github.com/h4ks-com/kess/releases/download/v0.2.3/kess-x86_64-pc-windows-msvc.zip",
+      "hash": "ff84913cbfce47e0463b04a4763ddb230bb2a352299830c9c36f4cae24fe3439"
     }
   },
   "bin": "kess.exe",
