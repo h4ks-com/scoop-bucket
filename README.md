@@ -10,6 +10,7 @@ scoop install h4ks/kess
 | App | What it is |
 |---|---|
 | [kess](https://github.com/h4ks-com/kess) | Chess on a glossy 3D board in your terminal, against a bot or online |
+| [katnav](https://github.com/h4ks-com/katnav) | Web browser for the terminal, drawn with the kitty graphics protocol |
 
 These apps draw with the kitty graphics protocol, which
 [WezTerm nightly](https://wezterm.org/install/windows.html) supports on

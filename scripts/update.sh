@@ -18,8 +18,10 @@ download=$(mktemp -d)
 trap 'rm -rf "$download"' EXIT
 gh release download "$tag" --repo "$repo" --pattern "$asset" --dir "$download"
 hash=$(sha256sum "$download/$asset" | cut -d ' ' -f 1)
-# the zip holds the program either loose or in a folder named after it
-bin=$(unzip -Z1 "$download/$asset" | grep -x "\($name/\)\?$name.exe")
+# the zip holds the program either loose or in a folder named after it, and
+# powershell writes the folder with a backslash
+bin=$(unzip -Z1 "$download/$asset" | tr '\\' / | grep -x "\($name/\)\?$name.exe")
+bin=${bin//\//\\}
 
 jq -n \
   --arg version "$version" \
