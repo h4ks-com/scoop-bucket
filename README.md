@@ -3,6 +3,8 @@
 Scoop manifests for h4ks-com projects, for Windows.
 
 ```
+scoop bucket add versions
+scoop install versions/wezterm-nightly
 scoop bucket add h4ks https://github.com/h4ks-com/scoop-bucket
 scoop install h4ks/kess
 ```
@@ -14,7 +16,7 @@ scoop install h4ks/kess
 
 These apps draw with the kitty graphics protocol, which
 [WezTerm nightly](https://wezterm.org/install/windows.html) supports on
-Windows.
+Windows, so the first two lines install it too. Run the apps in WezTerm.
 
 A workflow points each manifest at its project's latest release every six
 hours, and you can start it by hand from the Actions tab.
