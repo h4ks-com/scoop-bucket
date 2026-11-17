@@ -1,13 +1,13 @@
 {
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Web browser for the terminal, drawn with the kitty graphics protocol",
   "homepage": "https://github.com/h4ks-com/katnav",
   "license": "MIT|Apache-2.0",
   "notes": "Run it in WezTerm nightly to see its graphics: https://wezterm.org/install/windows.html",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/h4ks-com/katnav/releases/download/v0.3.0/katnav-x86_64-pc-windows-msvc.zip",
-      "hash": "ab987457e25d6ce164c184792d55d5e9ced0e9d13b9da8ae4d454cb091eceeb8"
+      "url": "https://github.com/h4ks-com/katnav/releases/download/v0.3.1/katnav-x86_64-pc-windows-msvc.zip",
+      "hash": "fcc2163acce555723a89e904bd96e2f1b16829b08152603d84d71c1cef27b7cd"
     }
   },
   "bin": "katnav\\katnav.exe",
